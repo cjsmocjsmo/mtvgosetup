@@ -1,4 +1,4 @@
-package mtvgosetup
+package main
 
 import (
 	"database/sql"
@@ -9,7 +9,7 @@ import (
 	// "github.com/disintegration/imaging"
 )
 
-func MtvGoSetup() {
+func main() {
 	dbdirpath := os.Getenv("MTV_DB_DIR_PATH")
 	if _, err := os.Stat(dbdirpath); os.IsNotExist(err) {
 		os.Mkdir(dbdirpath, 0755)
