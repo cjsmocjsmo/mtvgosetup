@@ -13,6 +13,8 @@ import (
 )
 
 func main() {
+	fmt.Println("Setting up the MTVGO")
+	log.Println("Setting up the MTVGO")
 	godotenv.Load("mtvgo.env")
 	dbdirpath := os.Getenv("MTV_DB_DIR_PATH")
 	if _, err := os.Stat(dbdirpath); os.IsNotExist(err) {
