@@ -2,6 +2,7 @@ package main
 
 import (
 	"database/sql"
+	"log"
 	"fmt"
 	"os"
 	"path/filepath"
@@ -42,6 +43,8 @@ func CreateThumbnails()  {
 		thumbnailPath := os.Getenv("MTV_THUMBNAILS_PATH") // Replace with the actual path where you want to save the thumbnail
 		fmt.Println(thumbnailPath)
 		fmt.Println(path)
+		log.Println(path)
+		log.Println(thumbnailPath)
 	
 		// 	img, err := imaging.Open(path)
 	// 	if err != nil {
