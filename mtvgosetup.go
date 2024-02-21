@@ -7,11 +7,13 @@ import (
 	"os"
 	"path/filepath"
 	_ "github.com/mattn/go-sqlite3"
+	"github.com/joho/godotenv"
 
 	// "github.com/disintegration/imaging"
 )
 
 func main() {
+	godotenv.Load("mtvgo.env")
 	dbdirpath := os.Getenv("MTV_DB_DIR_PATH")
 	if _, err := os.Stat(dbdirpath); os.IsNotExist(err) {
 		os.Mkdir(dbdirpath, 0755)
